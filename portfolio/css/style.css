@@ -8,8 +8,18 @@ footer p.copyright{
     padding-bottom: 10px;
 }
 
+footer{
+    background-color: #f8f9fa;
+    margin-top: 20px;
+}
+
 footer p{
     margin: 0;
+}
+
+footer ul{
+    list-style: none;
+    padding-left: 0;
 }
 
 #selected{
