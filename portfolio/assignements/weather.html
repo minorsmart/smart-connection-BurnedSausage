@@ -1,142 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mijn Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
-</head>
-<style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,900"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
     #weather {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 1.3em;
-        color: #fff;
-        text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 1.3em;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(
+        to right top,
+        #99bbcb,
+        #a5c7d7,
+        #b1d4e2,
+        #bde0ee,
+        #c9edfa
+      );
     }
     #weather h1 {
-        margin: 0 auto;
-        font-size: 2.2em;
-        text-align: center;
-        color: #fff;
-        font-size: 5em;
+      margin: 0 auto;
+      font-size: 2.2em;
+      text-align: center;
+      color: #fff;
+      font-size: 5em;
     }
     #weather.sunny {
-        background-image: linear-gradient(to right top, #ff4e50, #ff713e, #ff932b, #ffb41d, #f9d423);
+      background-image: linear-gradient(
+        to right top,
+        #ff4e50,
+        #ff713e,
+        #ff932b,
+        #ffb41d,
+        #f9d423
+      );
     }
     #weather.cloudy {
-        background-image: linear-gradient(to right top, #63747c, #71858e, #7f96a0, #8da8b2, #9bbac5);
+      background-image: linear-gradient(
+        to right top,
+        #63747c,
+        #71858e,
+        #7f96a0,
+        #8da8b2,
+        #9bbac5
+      );
     }
     #weather.rainy {
-        background-image: linear-gradient(to right top, #637c7b, #718e8c, #7ea09e, #8db2b0, #9bc5c3);
+      background-image: linear-gradient(
+        to right top,
+        #637c7b,
+        #718e8c,
+        #7ea09e,
+        #8db2b0,
+        #9bc5c3
+      );
     }
-</style>
-<body>
+  </style>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="../index.html">Smart Industry</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav nav" role="tablist">
-                <a class="nav-item nav-link" id="selected" href="../index.html"><i class="fa fa-fw fa-home"></i>Start</a>
-                <a class="nav-item nav-link" href="../business.html"><i class="fa fa-handshake-o"></i>Business</a>
-                <div class="dropdown">
-                    <a class="nav-item nav-link dropdown" href="../connection.html"><i class="fa fa-code"></i> Connection</a>
-                    <div class="dropdown-content">
-                        <a href="weather.html">Weather application</a>
-                    </div>
-                </div>
-                <a class="nav-item nav-link" href="../technology.html"><i class="fa fa-cog"></i> Technology</a>
-                <a class="nav-item nav-link" href="../project.html"><i class="fa fa-rocket"></i> Project</a>
+      <a class="navbar-brand" href="../index.html">Smart Industry</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav nav" role="tablist">
+          <a class="nav-item nav-link" id="selected" href="../index.html"
+            ><i class="fa fa-fw fa-home"></i>Start</a
+          >
+          <a class="nav-item nav-link" href="../business.html"
+            ><i class="fa fa-handshake-o"></i>Business</a
+          >
+          <div class="dropdown">
+            <a class="nav-item nav-link dropdown" href="../connection.html"
+              ><i class="fa fa-code"></i> Connection</a
+            >
+            <div class="dropdown-content">
+              <a href="weather.html">Weather application</a>
             </div>
+          </div>
+          <a class="nav-item nav-link" href="../technology.html"
+            ><i class="fa fa-cog"></i> Technology</a
+          >
+          <a class="nav-item nav-link" href="../project.html"
+            ><i class="fa fa-rocket"></i> Project</a
+          >
         </div>
+      </div>
     </nav>
 
-        <div id="weather">
-            <div id="description"></div>
-            <h1 id="temp"></h1>
-            <div id="location"></div>
-          </div>
-          <script lang="text/javascript">
-            function weatherBalloon( cityID ) {
-                var key = '8fa6bef492f92fcbbae65c886edd4b11';
-                fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityID+ ',NL&appid=' + key)  
-                .then(function(resp) { return resp.json() }) // Convert data to json
-                .then(function(data) {
-                    console.log(data);
-                    drawWeather(data); 
-                })
-                .catch(function() {
-                    // catch any errors
-                });
-            }
+    <div class="container">
+        <form id="form">
+            <label for="city">Stad:</label>
+            <input type="text" id="city" name="city">
+            <button type="button" onclick="onSubmit()">Search</button>
+        </form>
+    </div>
+      <div id="weather">
+        <div id="description"></div>
+        <h1 id="temp"></h1>
+        <div id="location"></div>
+      </div>
 
-            window.onload = function() {
-            weatherBalloon('Nijmegen');
-            }
 
-            function drawWeather( d ) {
-                var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-                var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
-                
-                document.getElementById('description').innerHTML = d.weather[0].description;
-                document.getElementById('temp').innerHTML = celcius + '&deg;';
-                document.getElementById('location').innerHTML = d.name;
-            }
-          </script>
+    <script lang="text/javascript">
+      function weatherBalloon( cityID ) {
+          var key = '8fa6bef492f92fcbbae65c886edd4b11';
+          fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityID+ ',NL&appid=' + key)
+          .then(function(resp) { return resp.json() }) // Convert data to json
+          .then(function(data) {
+              console.log(data);
+              drawWeather(data);
+          })
+          .catch(function() {
+              // catch any errors
+          });
+      }
+
+      window.onload = function() {
+        weatherBalloon('Nijmegen');
+      }
+
+      function onSubmit() {
+        console.log('test');
+        weatherBalloon(document.getElementById("city").value);
+      }
+
+      function drawWeather( d ) {
+          var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+          var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32);
+
+          document.getElementById('description').innerHTML = d.weather[0].description;
+          document.getElementById('temp').innerHTML = celcius + '&deg;';
+          document.getElementById('location').innerHTML = d.name;
+      }
+    </script>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="../index.html"><h3>Smart Industry</h3></a>
-                    <p>Smart Industry is een minor van de Hogeschool van Arnhem Nijmegen.</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Projecten</h3>
-                    <ul>
-                        <li><a href="../business.html">Business</a></li>
-                        <li><a href="../connection.html">Connection</a></li>
-                        <li><a href="../technology.html">Technology</a></li>
-                        <li><a href="../project.html">Project</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" 
-                            class="bi bi-telephone" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                            /></svg> +31 (0)6 57382774</p></li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                          </svg><a href="mailto: KD.Severijns@student.han.nl"> Email</a>
-                        </li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                          </svg>
-                            <a href="https://github.com/BurnedSausage"> Github</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="../index.html"><h3>Smart Industry</h3></a>
+            <p>
+              Smart Industry is een minor van de Hogeschool van Arnhem Nijmegen.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3>Projecten</h3>
+            <ul>
+              <li><a href="../business.html">Business</a></li>
+              <li><a href="../connection.html">Connection</a></li>
+              <li><a href="../technology.html">Technology</a></li>
+              <li><a href="../project.html">Project</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Contact</h3>
+            <ul>
+              <li>
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-telephone"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                    />
+                  </svg>
+                  +31 (0)6 57382774
+                </p>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+                  /></svg
+                ><a href="mailto: KD.Severijns@student.han.nl"> Email</a>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  />
+                </svg>
+                <a href="https://github.com/BurnedSausage"> Github</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="copyright">© 2019 Koen Severijns</p>
+      </div>
+      <p class="copyright">© 2019 Koen Severijns</p>
     </footer>
 
     <!-- FOR BOOTSTRAP -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
